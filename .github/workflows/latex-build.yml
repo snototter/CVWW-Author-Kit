@@ -2,9 +2,9 @@ name: LaTeX Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main-cvww ]
   pull_request:
-    branches: [ main ]
+    branches: [ main-cvww ]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: main.tex
+        root_file: cvww_template.tex
 
     - name: Check for LaTeX errors and warnings
       run: |
@@ -35,5 +35,5 @@ jobs:
     - name: Upload PDF
       uses: actions/upload-artifact@v4
       with:
-        name: main.pdf
-        path: main.pdf
+        name: cvww_template.pdf
+        path: cvww_template.pdf
