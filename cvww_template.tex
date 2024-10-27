@@ -1,29 +1,36 @@
-% CVPR 2025 Paper Template; see https://github.com/cvpr-org/author-kit
+% CVWW 2025 Paper Template, based on the CVPR 2025v3 template from
+% https://github.com/cvpr-org/author-kit
 
-\documentclass[10pt,twocolumn,letterpaper]{article}
+\documentclass[10pt,twocolumn,a4paper]{article}
 
-%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
-% \usepackage{cvpr}              % To produce the CAMERA-READY version
-\usepackage[review]{cvpr}      % To produce the REVIEW version
-% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE ACCORDINGLY
+% To produce the REVIEW version:
+\usepackage[review]{cvww}
+% To produce the CAMERA-READY version:
+% \usepackage[final]{cvww}
 
-% Import additional packages in the preamble file, before hyperref
-\input{preamble}
+%%%%%%%%% Additional Packages
+% Import additional packages here, before hyperref
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\todo}[1]{{\color{red}#1}}
+\newcommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
+% --- disable by uncommenting  
+% \renewcommand{\TODO}[1]{}
+% \renewcommand{\todo}[1]{#1}
 
-% It is strongly recommended to use hyperref, especially for the review version.
+
+% It is strongly recommended to use hyperref, especially for the review version
 % hyperref with option pagebackref eases the reviewers' job.
 % Please disable hyperref *only* if you encounter grave issues, 
 % e.g. with the file validation for the camera-ready version.
 %
-% If you comment hyperref and then uncomment it, you should delete *.aux before re-running LaTeX.
-% (Or just hit 'q' on the first LaTeX run, let it finish, and you should be clear).
-\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
-\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+% If you comment hyperref and then uncomment it, you should delete *.aux before
+% re-running LaTeX. (Or just hit 'q' on the first LaTeX run, let it finish, and
+% you should be clear).
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvwwblue]{hyperref}
 
 %%%%%%%%% PAPER ID  - PLEASE UPDATE
-\def\paperID{*****} % *** Enter the Paper ID here
-\def\confName{CVPR}
-\def\confYear{2025}
+\def\paperID{**} % *** Enter the Paper ID here
 
 %%%%%%%%% TITLE - PLEASE UPDATE
 \title{\LaTeX\ Author Guidelines for \confName~Proceedings}
@@ -47,14 +54,21 @@ First line of institution2 address\\
 
 \begin{document}
 \maketitle
-\input{sections/0_abstract}   
+
+%%%%%%%%% BODY TEXT
+% Best practice is to split the contents of your paper into separate .tex
+% files, as shown below:
+
+\input{sections/0_abstract}
 \input{sections/1_intro}
 \input{sections/2_formatting}
 \input{sections/3_finalcopy}
+
+% Place the bibliography (from references.bib) at the end:
 {
     \small
     \bibliographystyle{ieeenat_fullname}
-    \bibliography{main}
+    \bibliography{references}
 }
 
 % WARNING: do not forget to delete the supplementary pages from your submission 
