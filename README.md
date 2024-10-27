@@ -1,3 +1,9 @@
+# Modernized CVWW LaTeX template
+
+For CVWW 2025, we updated the paper template based on the new CVPR template and minor modifications from previous CVWW editions.
+The release notes of the CVPR template are reproduced below.
+
+
 # CVPR/ICCV/3DV Official LaTeX template 
 
 **Note:** the Microsoft Word version of the template is in the branch [`main-msword`](https://github.com/cvpr-org/author-kit/tree/main-msword).
